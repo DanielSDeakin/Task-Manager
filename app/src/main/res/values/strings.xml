@@ -1,3 +1,11 @@
 <resources>
+Primary Task
     <string name="app_name">Task Manager</string>
+    <string name="new_task">Create new Task</string>
+
+Second Task
+    <string name="title">Task:</string>
+    <string name="description">Brief Description:</string>
+    <string name="due_date">Due Date:</string>
+    <string name="upload_task">Upload</string>
 </resources>

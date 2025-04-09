@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B3F4C5"
+    android:background="#766153"
     tools:context=".MainActivity">
 
     <TextView
@@ -17,16 +17,19 @@
         android:scaleX="2"
         android:scaleY="2"
         android:text="@string/app_name"
-        android:textColor="#FF0000"
+        android:textColor="#EFF1ED"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="302dp"
-        tools:layout_editor_absoluteY="437dp" />
+        android:layout_width="154dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="add_task"
+        android:text="@string/new_task"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
