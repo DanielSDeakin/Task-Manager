@@ -1,34 +1,50 @@
 package com.example.taskmanager;
 
-import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName="tasks")
-public class RoomTable extends AppCompatActivity {
+public class RoomTable {
     @PrimaryKey(autoGenerate = true)
+    private int id;
     private String title;
     private String description;
     private String due_date;
 
     public RoomTable(String title, String description, String due_date) {
-
+        this.title = title;
+        this.description = description;
+        this.due_date = due_date;
+    }
+    public int getId() {
+        return id;
     }
 
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_room_table);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getDue_date() {
+        return due_date;
+    }
+
+    public void setDue_date(String due_date) {
+        this.due_date = due_date;
     }
 }
