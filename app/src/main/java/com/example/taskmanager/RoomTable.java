@@ -1,26 +1,30 @@
 package com.example.taskmanager;
 
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName="tasks")
 public class RoomTable {
-    @PrimaryKey(autoGenerate = true)
-    private int id;
+    @PrimaryKey
+    @NonNull
+    private String id;
     private String title;
     private String description;
     private String due_date;
 
     public RoomTable(String title, String description, String due_date) {
+        this.id = id;
         this.title = title;
         this.description = description;
         this.due_date = due_date;
     }
-    public int getId() {
+
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String title) {
         this.id = id;
     }
 

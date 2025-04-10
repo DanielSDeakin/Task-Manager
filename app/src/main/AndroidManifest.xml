@@ -13,10 +13,13 @@
         android:theme="@style/Theme.TaskManager"
         tools:targetApi="31">
         <activity
+            android:name=".TaskRepo"
+            android:exported="false" />
+        <activity
             android:name=".TaskDatabase"
             android:exported="false" />
         <activity
-            android:name=".DAO"
+            android:name=".RoomDao"
             android:exported="false" />
         <activity
             android:name=".RoomTable"

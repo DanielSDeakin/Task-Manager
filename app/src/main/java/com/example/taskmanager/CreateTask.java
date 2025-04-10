@@ -46,7 +46,7 @@ public class CreateTask extends AppCompatActivity {
                 String date = EditDueText.getText().toString();
 
                 RoomTable task = new RoomTable(title, desc, date);
-                database.taskDao().insert(task);
+                //database.taskDao().insert(task);
             }
 
         });
