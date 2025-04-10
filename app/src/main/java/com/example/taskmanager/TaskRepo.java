@@ -23,12 +23,6 @@ public class TaskRepo {
         listRoomTables = roomDao.getRoomTable();
     }
 
-    public TaskRepo() {
-        taskDatabase = null;
-        roomDao = null;
-        listRoomTables = null;
-    }
-
         public void insertRoomTable(RoomTable task) {
         TaskDatabase.databaseWriteExecutor.execute(() -> roomDao.insert(task));
         }
