@@ -11,4 +11,6 @@
     <string name="edit_title">Title…</string>
     <string name="edit_description">Description…</string>
     <string name="edit_due_date">day-month-year</string>
+    <string name="recycler_view">Recycler View</string>
+    <string name="show_task">Show Tasks</string>
 </resources>

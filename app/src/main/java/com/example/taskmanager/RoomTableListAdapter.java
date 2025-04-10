@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class RoomTableListAdapter extends RecyclerView.Adapter<RoomTableListAdapter.RoomTableViewHolder> {
     ArrayList<RoomTable> taskArrayList;
@@ -22,15 +23,21 @@ public class RoomTableListAdapter extends RecyclerView.Adapter<RoomTableListAdap
     @Override
     public RoomTableViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(R.layout.activity_create_task, parent, false);
+        View view = layoutInflater.inflate(R.layout.task_item, parent, false);
         return new RoomTableViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull RoomTableViewHolder holder, int position) {
+        RoomTable task = taskArrayList.get(position);
         holder.textTitle.setText(taskArrayList.get(position).getTitle());
         holder.textDesc.setText((taskArrayList.get(position).getDescription()));
         holder.textDate.setText(taskArrayList.get(position).getDue_date());
+    }
+
+    public void updateData(List<RoomTable> newTaskList) {
+        taskArrayList.clear();
+        taskArrayList.addAll(newTaskList);
     }
 
     @Override
