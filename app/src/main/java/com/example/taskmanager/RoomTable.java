@@ -3,6 +3,7 @@ package com.example.taskmanager;
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+import java.util.UUID;
 
 @Entity(tableName="tasks")
 public class RoomTable {
@@ -14,7 +15,7 @@ public class RoomTable {
     private String due_date;
 
     public RoomTable(String title, String description, String due_date) {
-        this.id = id;
+        this.id = UUID.randomUUID().toString();
         this.title = title;
         this.description = description;
         this.due_date = due_date;
@@ -24,7 +25,7 @@ public class RoomTable {
         return id;
     }
 
-    public void setId(String title) {
+    public void setId(String id) {
         this.id = id;
     }
 
